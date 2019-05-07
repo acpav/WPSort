@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="changeUserToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 22</value>
+  </data>
+  <data name="changeUserToolStripMenuItem.Text" xml:space="preserve">
+    <value>Авторизация...</value>
+  </data>
+  <data name="toolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>201, 6</value>
+  </data>
+  <data name="printerSettingsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 22</value>
+  </data>
+  <data name="printerSettingsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Настройки принтера...</value>
+  </data>
+  <data name="pageSettingsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 22</value>
+  </data>
+  <data name="pageSettingsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Параметры страницы...</value>
+  </data>
+  <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>201, 6</value>
+  </data>
+  <data name="exitToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 22</value>
+  </data>
+  <data name="exitToolStripMenuItem.Text" xml:space="preserve">
+    <value>Выход</value>
+  </data>
+  <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 20</value>
+  </data>
+  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
+    <value>Файл</value>
+  </data>
+  <data name="englishToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>119, 22</value>
+  </data>
+  <data name="russianToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>119, 22</value>
+  </data>
+  <data name="russianToolStripMenuItem.Text" xml:space="preserve">
+    <value>Русский</value>
+  </data>
+  <data name="lToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>237, 22</value>
+  </data>
+  <data name="lToolStripMenuItem.Text" xml:space="preserve">
+    <value>Язык приложения (Language)</value>
+  </data>
+  <data name="editToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 20</value>
+  </data>
+  <data name="editToolStripMenuItem.Text" xml:space="preserve">
+    <value>Правка</value>
+  </data>
+  <data name="aboutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>158, 22</value>
+  </data>
+  <data name="aboutToolStripMenuItem.Text" xml:space="preserve">
+    <value>О программе...</value>
+  </data>
+  <data name="helpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 20</value>
+  </data>
+  <data name="helpToolStripMenuItem.Text" xml:space="preserve">
+    <value>Справка</value>
+  </data>
+  <data name="BarcodeBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>264, 56</value>
+  </data>
+  <data name="BarcodeBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>360, 29</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>160, 53</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>98, 35</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Штрихкод</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="button3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="button3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>255, 38</value>
+  </data>
+  <data name="button3.Text" xml:space="preserve">
+    <value>Номер AWB...</value>
+  </data>
+  <data name="labelAWB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>264, 9</value>
+  </data>
+  <data name="button1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>255, 38</value>
+  </data>
+  <data name="button1.Text" xml:space="preserve">
+    <value>Отчет о сканировании</value>
+  </data>
+  <data name="toolStripStatusLabelCountBarcode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>131, 17</value>
+  </data>
+  <data name="toolStripStatusLabelCountBarcode.Text" xml:space="preserve">
+    <value>Всего: 0 Напечатано: 0</value>
+  </data>
+  <data name="toolStripStatusLabel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>396, 17</value>
+  </data>
+  <data name="toolStripLabel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 22</value>
+  </data>
+  <data name="toolStripLabel1.Text" xml:space="preserve">
+    <value>Страна</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAA
+        AADMu/kAzLr5AMez+QDItfkA7uj9APz7/gDCrfg6WSDt11Uc7d63nvdY/fv+APHr/QDp4fwA9fL9APXx
+        /QDk2vwAzLv5AMy6+QDHtPkAzr36AKmM9gB1R/AAXyjuskwP7f9KDOz/ZzPv1b6p+ACggPUA1sn6APn2
+        /QD18f0A5Nr8AMy7+QDMuvkAx7T5ANPD+gCTb/MFeUzxBZFr831HCez/Rgjs/4tj86KcevQCbDvwCeDV
+        +wD69/0A9vP9AOXb/ADMu/kAzLn5AM28+QC1nPcyYCru02It79SoivZLflPxi3JC8Ja/qfg+ZjLvxlIY
+        7d2/qfhE+fb9APDq/QDi1/wAzbz5AK2R9gClh/UAbj3wokkL7P9KDez/YSzu2ZZy9ADGs/kAfFDxuUYI
+        7P9JC+z/ckLwxdzR+wCzmfcAxLH4ANDA+QCskfYAvqj4AIVb8ohEBez/Rgfs/2o378G+qPgC0MD6AX5S
+        8Z1GB+z/RAXs/4JX8qnUxPoAqo32Asaz+ACzmvc9Yi3vymMu786miPVklnP0fZBq84K8pfhFbDrwxmAq
+        7s+bevRRhl7ydn5T8ombevRWZzPvxVwm7tGkhfVYcD/wyEcJ7P9KDez/WyTutqOF9QCoivUAaDXvpEkL
+        7P9ICuz/bTzwyLef9wC9p/cAflPxo0YH7P9KDez/Xyju1npN8bNFBuz/SArs/2Is76mZd/QAnXz0AHdJ
+        8Y1ICez/RQbs/3ZI8bG/qvgAybf5AIpi85NDBOz/Rwns/2k28Mq1nPcgdEXwq3VH8bGrjvZSaznvsW49
+        8Le+qPhDfVDyp3RE8bSigvU8eUzxqm48776ce/RQfVHxo2w68LbItvkzu6P3AMaz+AC2nvcAfFDxlEgJ
+        7P9JCuz/Yizv0LCW9gDj2vwAe07xrkUG7P9FBuv/eErxuOHX/AC0mvcA49r7ALqj9wC5ovcArJD2AHVG
+        8ZlICuz/SAvs/2kr886Ps9wAsundAIdR9qtEBev/Rwns/3RF8bzOvfoAspn2AOHX+wC8pvcAw674AM+9
+        +gC2nvcgaznvo3M29aKnqus/XOKysE7Yrr2wyOdEf0j1lGEq763Crfgr8+/9AO7o/ADp4vwAvKb3AMSv
+        +ADKt/kAxbH4AJJm9gB9kd0AYeG1kC/Mov8ty6H/Yt62uMXT7gCNZPQAz7/5APz6/gD18v0A6eL8ALym
+        9wDEr/gAyrf5AMGo+QCrqe0Ajd/MAFrYtJoxzKL/L8yi/1zXtr/Q+ecAsa3wANC++gD59/4A9PD9AOni
+        /AC8pvcAxK/4AMm3+QC+p/gA4+/1APb/+QC97uEdSdKtxUXRq86/7+Iv8Pv4AOf68wDp6PoA9fD+APTw
+        /QDp4vwA/D8AAPw/AADwDwAA4AcAAOGHAADgBQAAAAAAAAwwAAAMMAAAAAAAAOGHAADhhwAA4AcAAPw/
+        AAD8PwAA/D8AAA==
+</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Рабочее место сорировщика</value>
+  </data>
+</root>

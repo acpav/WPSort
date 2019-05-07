@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:tns="http://mgrc.boxberry.de" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" name="MgrcSoap" targetNamespace="http://mgrc.boxberry.de" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://mgrc.boxberry.de">
+      <s:element name="parcelsFromTransportDocumentRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="token" type="s:string" />
+            <s:element name="TransportNumber" type="s:string" />
+            <s:element name="from" nillable="true" type="s:string" />
+            <s:element name="limitStart" nillable="true" type="s:integer" />
+            <s:element name="limitCount" nillable="true" type="s:integer" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="parcelsFromTransportDocumentResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="id" type="s:integer" />
+            <s:element name="TransportNumber" type="s:string" />
+            <s:element name="from" type="s:string" />
+            <s:element name="to" type="s:string" />
+            <s:element name="total" type="s:integer" />
+            <s:element name="limitStart" nillable="true" type="s:integer" />
+            <s:element name="limitEnd" nillable="true" type="s:integer" />
+            <s:element minOccurs="1" maxOccurs="unbounded" name="parcels" type="tns:parcelsData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="parcelsData">
+        <s:sequence>
+          <s:element name="Scaned" nillable="true" type="s:boolean" />
+          <s:element name="Barcode" type="s:string" />
+          <s:element name="Client_name" type="s:string" />
+          <s:element name="Country" type="s:string" />
+          <s:element name="Country_сode" type="s:string" />
+          <s:element name="Label" type="s:string" />
+          <s:element name="Label_ID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="parcelsScanResultRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="token" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="unbounded" name="parcels" type="tns:parcelsScaned" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="parcelsScaned">
+        <s:sequence>
+          <s:element name="Label_ID" type="s:string" />
+          <s:element name="box" type="s:string" />
+          <s:element name="pallet" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="parcelsScanResultResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="unbounded" name="parcels" type="tns:parcelsScanedAnswer" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="parcelsScanedAnswer">
+        <s:sequence>
+          <s:element name="Label_ID" type="s:string" />
+          <s:element name="error" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="parcelInfoRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="token" type="s:string" />
+            <s:element name="Label_ID" type="s:string" />
+            <s:element name="Label" nillable="true" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="parcelInfoResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="unbounded" name="parcels" type="tns:parcelInfoParcel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="parcelInfoParcel">
+        <s:sequence>
+          <s:element name="Scaned" nillable="true" type="s:boolean" />
+          <s:element name="Barcode" type="s:string" />
+          <s:element name="Client_name" type="s:string" />
+          <s:element name="Country" type="s:string" />
+          <s:element name="Country_сode" type="s:string" />
+          <s:element name="Label" nillable="true" type="s:string" />
+          <s:element name="Label_ID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="unbounded" name="movement" type="tns:parcelInfoMovement" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="parcelInfoMovement">
+        <s:sequence>
+          <s:element name="id" type="s:integer" />
+          <s:element name="TransportNumber" type="s:string" />
+          <s:element name="from" type="s:string" />
+          <s:element name="to" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="parcelMoveRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="token" type="s:string" />
+            <s:element name="Label_ID" type="s:string" />
+            <s:element name="Move_TO" type="s:integer" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="parcelMoveResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="error" type="s:integer" />
+            <s:element name="error_text" nillable="true" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="parcelsFromTransportDocumentRequest">
+    <wsdl:part name="params" element="tns:parcelsFromTransportDocumentRequest" />
+  </wsdl:message>
+  <wsdl:message name="parcelsFromTransportDocumentResult">
+    <wsdl:part name="params" element="tns:parcelsFromTransportDocumentResult" />
+  </wsdl:message>
+  <wsdl:message name="parcelsScanResultRequest">
+    <wsdl:part name="params" element="tns:parcelsScanResultRequest" />
+  </wsdl:message>
+  <wsdl:message name="parcelsScanResultResult">
+    <wsdl:part name="params" element="tns:parcelsScanResultResult" />
+  </wsdl:message>
+  <wsdl:message name="parcelInfoRequest">
+    <wsdl:part name="params" element="tns:parcelInfoRequest" />
+  </wsdl:message>
+  <wsdl:message name="parcelInfoResult">
+    <wsdl:part name="params" element="tns:parcelInfoResult" />
+  </wsdl:message>
+  <wsdl:message name="parcelMoveRequest">
+    <wsdl:part name="params" element="tns:parcelMoveRequest" />
+  </wsdl:message>
+  <wsdl:message name="parcelMoveResult">
+    <wsdl:part name="params" element="tns:parcelMoveResult" />
+  </wsdl:message>
+  <wsdl:portType name="MgrcSoapPortType">
+    <wsdl:operation name="parcelsFromTransportDocument">
+      <wsdl:input message="tns:parcelsFromTransportDocumentRequest" />
+      <wsdl:output message="tns:parcelsFromTransportDocumentResult" />
+    </wsdl:operation>
+    <wsdl:operation name="parcelsScanResult">
+      <wsdl:input message="tns:parcelsScanResultRequest" />
+      <wsdl:output message="tns:parcelsScanResultResult" />
+    </wsdl:operation>
+    <wsdl:operation name="parcelInfo">
+      <wsdl:input message="tns:parcelInfoRequest" />
+      <wsdl:output message="tns:parcelInfoResult" />
+    </wsdl:operation>
+    <wsdl:operation name="parcelMove">
+      <wsdl:input message="tns:parcelMoveRequest" />
+      <wsdl:output message="tns:parcelMoveResult" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MgrcSoapBinding" type="tns:MgrcSoapPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="parcelsFromTransportDocument">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="parcelsScanResult">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="parcelInfo">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="parcelMove">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MgrcSoap">
+    <wsdl:port name="ChooseColourPort" binding="tns:MgrcSoapBinding">
+      <soap:address location="http://mgrc.boxberry.de/_api/soap_bb_ssc.php" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
