@@ -1,5 +1,7 @@
 # WPSort
 
+Можно собрать проект на Microsoft Visual Studio Community 2019 и старше  
+
 Для сборки нужно установить:  
 
 1. **Free Spire.PDFViewer for .NET**  
