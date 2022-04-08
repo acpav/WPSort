@@ -13,7 +13,7 @@
     <FileAlignment>512</FileAlignment>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <TargetFrameworkProfile />
-    <PublishUrl>C:\Users\pavel.konev\Documents\public\</PublishUrl>
+    <PublishUrl>C:\Users\acpavel\Documents\public\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -23,8 +23,8 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>17</ApplicationRevision>
-    <ApplicationVersion>1.4.1.%2a</ApplicationVersion>
+    <ApplicationRevision>18</ApplicationRevision>
+    <ApplicationVersion>1.4.2.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>false</BootstrapperEnabled>
@@ -91,13 +91,13 @@
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft.NET\Primary Interop Assemblies\Microsoft.mshtml.dll</HintPath>
     </Reference>
     <Reference Include="Spire.License">
-      <HintPath>..\..\..\..\Восстановленное\pavel.konev\Documents\Visual Studio 2015\Projects\WPSort\WPSort\bin\Debug\Spire.License.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\e-iceblue\Spire.PdfViewer-Fe\Bin\NET4.0\Spire.License.dll</HintPath>
     </Reference>
     <Reference Include="Spire.Pdf">
-      <HintPath>..\..\..\..\Восстановленное\pavel.konev\Documents\Visual Studio 2015\Projects\WPSort\WPSort\bin\Debug\Spire.Pdf.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\e-iceblue\Spire.PdfViewer-Fe\Bin\NET4.0\Spire.Pdf.dll</HintPath>
     </Reference>
     <Reference Include="Spire.PdfViewer.Forms">
-      <HintPath>..\..\..\..\Восстановленное\pavel.konev\Documents\Visual Studio 2015\Projects\WPSort\WPSort\bin\Debug\Spire.PdfViewer.Forms.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\e-iceblue\Spire.PdfViewer-Fe\Bin\NET4.0\Spire.PdfViewer.Forms.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -235,10 +235,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <WebReferenceUrl Include="http://mgrc.boxberry.de/_api/soap_bb_ssc.php%3fwsdl">
+    <WebReferenceUrl Include="https://mgrc.boxberry.de/_api/soap_bb_ssc.php%3fwsdl">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\de.boxberry.mgrc\</RelPath>
-      <UpdateFromURL>http://mgrc.boxberry.de/_api/soap_bb_ssc.php%3fwsdl</UpdateFromURL>
+      <UpdateFromURL>https://mgrc.boxberry.de/_api/soap_bb_ssc.php%3fwsdl</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>

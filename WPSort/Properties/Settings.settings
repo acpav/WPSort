@@ -6,7 +6,7 @@
       <Value Profile="(Default)">en-US</Value>
     </Setting>
     <Setting Name="WPSort_de_boxberry_mgrc_MgrcSoap" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">http://mgrc.boxberry.de/_api/soap_bb_ssc.php</Value>
+      <Value Profile="(Default)">https://mgrc.boxberry.de/_api/soap_bb_ssc.php</Value>
     </Setting>
     <Setting Name="MaxRead" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">20</Value>

@@ -23,10 +23,10 @@ namespace WPSort.de.boxberry.mgrc {
     
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Web.Services.WebServiceBindingAttribute(Name="MgrcSoapBinding", Namespace="http://mgrc.boxberry.de")]
+    [System.Web.Services.WebServiceBindingAttribute(Name="MgrcSoapBinding", Namespace="mgrc.boxberry.de")]
     public partial class MgrcSoap : System.Web.Services.Protocols.SoapHttpClientProtocol {
         
         private System.Threading.SendOrPostCallback parcelsFromTransportDocumentOperationCompleted;
@@ -89,8 +89,8 @@ namespace WPSort.de.boxberry.mgrc {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
-        [return: System.Xml.Serialization.XmlElementAttribute(Namespace="http://mgrc.boxberry.de")]
-        public parcelsFromTransportDocumentResult parcelsFromTransportDocument([System.Xml.Serialization.XmlElementAttribute(Namespace="http://mgrc.boxberry.de")] parcelsFromTransportDocumentRequest parcelsFromTransportDocumentRequest) {
+        [return: System.Xml.Serialization.XmlElementAttribute(Namespace="mgrc.boxberry.de")]
+        public parcelsFromTransportDocumentResult parcelsFromTransportDocument([System.Xml.Serialization.XmlElementAttribute(Namespace="mgrc.boxberry.de")] parcelsFromTransportDocumentRequest parcelsFromTransportDocumentRequest) {
             object[] results = this.Invoke("parcelsFromTransportDocument", new object[] {
                         parcelsFromTransportDocumentRequest});
             return ((parcelsFromTransportDocumentResult)(results[0]));
@@ -119,9 +119,9 @@ namespace WPSort.de.boxberry.mgrc {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
-        [return: System.Xml.Serialization.XmlArrayAttribute(Namespace="http://mgrc.boxberry.de")]
+        [return: System.Xml.Serialization.XmlArrayAttribute(Namespace="mgrc.boxberry.de")]
         [return: System.Xml.Serialization.XmlArrayItemAttribute("parcels", IsNullable=false)]
-        public parcelsScanedAnswer[] parcelsScanResult([System.Xml.Serialization.XmlElementAttribute(Namespace="http://mgrc.boxberry.de")] parcelsScanResultRequest parcelsScanResultRequest) {
+        public parcelsScanedAnswer[] parcelsScanResult([System.Xml.Serialization.XmlElementAttribute(Namespace="mgrc.boxberry.de")] parcelsScanResultRequest parcelsScanResultRequest) {
             object[] results = this.Invoke("parcelsScanResult", new object[] {
                         parcelsScanResultRequest});
             return ((parcelsScanedAnswer[])(results[0]));
@@ -150,9 +150,9 @@ namespace WPSort.de.boxberry.mgrc {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
-        [return: System.Xml.Serialization.XmlArrayAttribute(Namespace="http://mgrc.boxberry.de")]
+        [return: System.Xml.Serialization.XmlArrayAttribute(Namespace="mgrc.boxberry.de")]
         [return: System.Xml.Serialization.XmlArrayItemAttribute("parcels", IsNullable=false)]
-        public parcelInfoParcel[] parcelInfo([System.Xml.Serialization.XmlElementAttribute(Namespace="http://mgrc.boxberry.de")] parcelInfoRequest parcelInfoRequest) {
+        public parcelInfoParcel[] parcelInfo([System.Xml.Serialization.XmlElementAttribute(Namespace="mgrc.boxberry.de")] parcelInfoRequest parcelInfoRequest) {
             object[] results = this.Invoke("parcelInfo", new object[] {
                         parcelInfoRequest});
             return ((parcelInfoParcel[])(results[0]));
@@ -181,8 +181,8 @@ namespace WPSort.de.boxberry.mgrc {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
-        [return: System.Xml.Serialization.XmlElementAttribute(Namespace="http://mgrc.boxberry.de")]
-        public parcelMoveResult parcelMove([System.Xml.Serialization.XmlElementAttribute(Namespace="http://mgrc.boxberry.de")] parcelMoveRequest parcelMoveRequest) {
+        [return: System.Xml.Serialization.XmlElementAttribute(Namespace="mgrc.boxberry.de")]
+        public parcelMoveResult parcelMove([System.Xml.Serialization.XmlElementAttribute(Namespace="mgrc.boxberry.de")] parcelMoveRequest parcelMoveRequest) {
             object[] results = this.Invoke("parcelMove", new object[] {
                         parcelMoveRequest});
             return ((parcelMoveResult)(results[0]));
@@ -229,11 +229,11 @@ namespace WPSort.de.boxberry.mgrc {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://mgrc.boxberry.de")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="mgrc.boxberry.de")]
     public partial class parcelsFromTransportDocumentRequest {
         
         private string tokenField;
@@ -245,6 +245,8 @@ namespace WPSort.de.boxberry.mgrc {
         private string limitStartField;
         
         private string limitCountField;
+        
+        private string noLablsField;
         
         /// <remarks/>
         public string token {
@@ -298,14 +300,25 @@ namespace WPSort.de.boxberry.mgrc {
                 this.limitCountField = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="integer", IsNullable=true)]
+        public string noLabls {
+            get {
+                return this.noLablsField;
+            }
+            set {
+                this.noLablsField = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://mgrc.boxberry.de")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="mgrc.boxberry.de")]
     public partial class parcelInfoMovement {
         
         private string idField;
@@ -359,11 +372,11 @@ namespace WPSort.de.boxberry.mgrc {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://mgrc.boxberry.de")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="mgrc.boxberry.de")]
     public partial class parcelInfoParcel {
         
         private System.Nullable<bool> scanedField;
@@ -467,11 +480,11 @@ namespace WPSort.de.boxberry.mgrc {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://mgrc.boxberry.de")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="mgrc.boxberry.de")]
     public partial class parcelsScanedAnswer {
         
         private string label_IDField;
@@ -500,11 +513,11 @@ namespace WPSort.de.boxberry.mgrc {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://mgrc.boxberry.de")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="mgrc.boxberry.de")]
     public partial class parcelsScaned {
         
         private string label_IDField;
@@ -545,11 +558,11 @@ namespace WPSort.de.boxberry.mgrc {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://mgrc.boxberry.de")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="mgrc.boxberry.de")]
     public partial class parcelsData {
         
         private System.Nullable<bool> scanedField;
@@ -639,11 +652,11 @@ namespace WPSort.de.boxberry.mgrc {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://mgrc.boxberry.de")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="mgrc.boxberry.de")]
     public partial class parcelsFromTransportDocumentResult {
         
         private string idField;
@@ -749,11 +762,11 @@ namespace WPSort.de.boxberry.mgrc {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://mgrc.boxberry.de")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="mgrc.boxberry.de")]
     public partial class parcelsScanResultRequest {
         
         private string tokenField;
@@ -783,11 +796,11 @@ namespace WPSort.de.boxberry.mgrc {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://mgrc.boxberry.de")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="mgrc.boxberry.de")]
     public partial class parcelInfoRequest {
         
         private string tokenField;
@@ -829,11 +842,11 @@ namespace WPSort.de.boxberry.mgrc {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://mgrc.boxberry.de")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="mgrc.boxberry.de")]
     public partial class parcelMoveRequest {
         
         private string tokenField;
@@ -875,11 +888,11 @@ namespace WPSort.de.boxberry.mgrc {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://mgrc.boxberry.de")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="mgrc.boxberry.de")]
     public partial class parcelMoveResult {
         
         private string errorField;
@@ -910,11 +923,11 @@ namespace WPSort.de.boxberry.mgrc {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     public delegate void parcelsFromTransportDocumentCompletedEventHandler(object sender, parcelsFromTransportDocumentCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class parcelsFromTransportDocumentCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -936,11 +949,11 @@ namespace WPSort.de.boxberry.mgrc {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     public delegate void parcelsScanResultCompletedEventHandler(object sender, parcelsScanResultCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class parcelsScanResultCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -962,11 +975,11 @@ namespace WPSort.de.boxberry.mgrc {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     public delegate void parcelInfoCompletedEventHandler(object sender, parcelInfoCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class parcelInfoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -988,11 +1001,11 @@ namespace WPSort.de.boxberry.mgrc {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     public delegate void parcelMoveCompletedEventHandler(object sender, parcelMoveCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class parcelMoveCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {

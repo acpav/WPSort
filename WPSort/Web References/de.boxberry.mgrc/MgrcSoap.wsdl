@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<wsdl:definitions xmlns:tns="http://mgrc.boxberry.de" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" name="MgrcSoap" targetNamespace="http://mgrc.boxberry.de" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+<wsdl:definitions xmlns:tns="mgrc.boxberry.de" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" name="MgrcSoap" targetNamespace="mgrc.boxberry.de" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:types>
-    <s:schema elementFormDefault="qualified" targetNamespace="http://mgrc.boxberry.de">
+    <s:schema elementFormDefault="qualified" targetNamespace="mgrc.boxberry.de">
       <s:element name="parcelsFromTransportDocumentRequest">
         <s:complexType>
           <s:sequence>
@@ -10,6 +10,7 @@
             <s:element name="from" nillable="true" type="s:string" />
             <s:element name="limitStart" nillable="true" type="s:integer" />
             <s:element name="limitCount" nillable="true" type="s:integer" />
+            <s:element name="noLabls" nillable="true" type="s:integer" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -204,7 +205,7 @@
   </wsdl:binding>
   <wsdl:service name="MgrcSoap">
     <wsdl:port name="ChooseColourPort" binding="tns:MgrcSoapBinding">
-      <soap:address location="http://mgrc.boxberry.de/_api/soap_bb_ssc.php" />
+      <soap:address location="https://mgrc.boxberry.de/_api/soap_bb_ssc.php" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>
